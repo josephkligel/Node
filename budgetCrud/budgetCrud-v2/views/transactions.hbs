@@ -1,0 +1,42 @@
+{{>header}}
+
+  <h1>{{text}}</h1>
+
+  <a href="/add" class="btn btn-sm btn-success">Add</a>
+
+  <table class="table table-bordered table-dark table-striped table-hover table-sm table-responsive-sm">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Payment Type</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each records}}
+      <tr>
+        <td>{{this._id}}</td>
+        <td>{{this.date}}</td>
+        <td>{{this.type}}</td>
+        <td>{{this.payment_type}}</td>
+        <td>{{this.category}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.amount}}</td>
+        <td>
+            <a href="/record/?id={{this._id}}" class="btn btn-sm btn-primary">Edit</a>
+
+            <form action="/delete?id={{this._id}}" method="post">
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{>footer}}

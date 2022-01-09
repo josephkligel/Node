@@ -1,0 +1,34 @@
+{
+  "name": "budgetcrud",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "env-cmd -f config/dev.env nodemon src/app.js"
+  },
+  "author": "Joseph Kligel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zigjag/budgetCrud.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/zigjag/budgetCrud/issues"
+  },
+  "homepage": "https://github.com/zigjag/budgetCrud#readme",
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  },
+  "description": ""
+}
